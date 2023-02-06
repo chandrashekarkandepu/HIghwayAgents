@@ -1,0 +1,66 @@
+<html>
+<head>
+	<link rel="stylesheet" style="text/css" href="stylemap.css">
+</head>
+<header>
+			<nav>
+		<h1>ADD THE AGENCY LOCATIONS MANUALLY</h1>
+		</nav>
+		</header>
+		<body>
+<form id="contact" action="send.php" method="post"><br>
+			<div id="image">
+      <div id="locationField" required>
+		<center><input type="text" name="agencyname" placeholder="Enter agency name"><br><br>
+	  
+          <input id="autocomplete" placeholder="Adresses"
+                 onFocus="geolocate()" type="text" name="address" required="required"></input>
+      </div><br>
+      <center><input name="latitude" id="latitude" placeholder="Latitude" class="form-control" required="required"/><br><br>
+      <input name="longitude" id="longitude" placeholder="Longitude" class="form-control" required="required"/><br><br>
+      <input type="submit" name="submit" value="submit" class="button"/></center>
+	  <a href="welcome.php"><-go to home</a>
+		
+      <script>
+
+            // Bias the autocomplete object to the user's geographical location,
+        // as supplied by the browser's 'navigator.geolocation' object.
+        function geolocate() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var geolocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+              var circle = new google.maps.Circle({
+                center: geolocation,
+                radius: position.coords.accuracy
+              });
+              autocomplete.setBounds(circle.getBounds());
+            });
+          }
+        }
+          function initAutocomplete() {
+              autocomplete = new
+                      google.maps.places.Autocomplete(
+                              /** @type {!HTMLInputElement}
+
+                               */(document.getElementById('autocomplete')),
+                              {types: ['geocode'], componentRestrictions: {country: 'in'}});
+
+              autocomplete.addListener('place_changed', fillInAddress);
+          }
+          function fillInAddress() {
+            var place = autocomplete.getPlace();
+            console.log(place);
+          document.getElementById('latitude').value = place.geometry.location.lat();
+          document.getElementById('longitude').value = place.geometry.location.lng();
+        }
+      </script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?input=Chilakaluripet&types=geocode&key=AIzaSyCwejNrL1MU5V1XxnK4aMc8_2v4Zvp19zg&libraries=places&callback=initAutocomplete"
+      async defer></script>
+  </form>
+  </body>
+  </div>
+  </html>

@@ -1,0 +1,26 @@
+header
+{
+	background: black;
+	color:white;
+	padding: 8px 0px 6px 40px;
+	height:40px;
+}
+header h1{
+	display: inline;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	font-size: 32px;
+	float: left;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+#image
+{
+	background:url(maps.jpg);
+	background-size:100%;
+	
+	
+	
+	
+	
+}

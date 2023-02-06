@@ -1,0 +1,184 @@
+.{
+	margin:0;
+	padding:0;
+
+}
+.row
+{
+	max-width: 1140px;
+	margin: 0 auto;
+}
+body
+{
+
+
+	font-family: tahoma;
+}
+.hero{
+
+	position:absolute;
+	width:1140px;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+header{
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/hero.jpg);
+	height:100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+h1
+{
+	color : white;
+}
+.main-nav{
+		list-style: none;
+		float:right;
+		margin-top: 50px;
+}
+.main-nav li {
+	display:inline-block;
+	margin-left: 20px;
+}
+.main-nav li a
+{
+	color:white;
+	text-decoration: none;
+	font-size: 90%;
+	font-weight: bold;
+}
+.main-nav li a:hover
+{
+	color:#e67e22;
+	border-bottom: 2px solid #e67e22;
+	transition: all 0.5s ease-in;	
+	padding:15px 0;
+}
+.logo img{
+	height:100px;
+	float: left;
+	margin-top: 30px;
+}
+.btn
+{
+	border:1px solid #e67e22;
+	padding:10px 30px;
+	color: #e67e22;
+	text-decoration: none;
+	border-radius: 12px;
+	margin-right:15px;
+}
+.button-awesome{
+	margin-top: 40px;
+}
+.btn-half
+{
+	background-color:#e67e22;
+	color:white;
+}
+.btn-full:hover
+{
+	background-color: #e67e22;
+	color:white;
+	transition: all 0.5s ease-in;
+}
+.features h3
+{
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 30px;
+}
+.copy{
+	width:70%;
+	text-align: center;
+}
+h3:after
+{
+	width: 100px;
+	height:2px;
+	background-color: #e67e22;
+	display: block;
+	content: "";
+	margin:0 auto;
+	margin-top: 30px;
+}
+.arranging
+{
+	text-align: justify;
+}
+.features i
+{
+	font-size: 40px;
+	color: #e67e22;
+	margin-left: 35%;
+}
+.features h4
+{
+	margin-left: 40px;
+}
+
+.highway-showcase
+{
+	list-style: none;
+	width: 100%;
+}
+.highway-showcase li
+{
+	display: block;
+	width: 25%;
+	float: left;
+}
+.highway-photo
+
+{
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+
+}
+.highway-photo img
+{
+	width: 100%;
+	height: auto;
+	transform: scale(1.15);
+	transition: all 0.5s ;
+}
+.highway-photo img:hover
+{
+	transform: scale(1.05);
+}
+.highway
+{
+	margin-top: 60px;
+}
+.cities
+{
+	margin-top: 100px;
+}
+.cities img
+{
+	width: 100%;
+	margin-top: 50px;
+
+}
+.cities i
+{
+	color:#e67e22;
+}
+.btn-block
+{
+	background-color: #e67e22;
+	color:#fff;
+	border-radius: 4px;
+	margin-top: 20px;
+}
+.gap
+{
+	margin-top: 40px;
+}
+.form
+{
+	margin-top: 40px;
+}

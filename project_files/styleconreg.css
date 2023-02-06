@@ -1,0 +1,54 @@
+body{
+	background:url(contractor1.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+	}
+
+
+
+
+
+
+.simple-form {
+	text-align: center;
+	margin:100px 400px;
+}
+#REGISTRATION{
+		width:100%;
+		background-color:#051019;
+		opacity: 0.8;
+		padding:50px 0px;
+}
+#button
+{
+	width:250px;
+	padding:10px;
+	border-radius: 5px;
+	outline: 0px;
+}
+#phn
+{
+	outline:0px; 
+	width:50px;
+	padding:10px;
+	border-radius: 5px;
+
+}
+#phone{
+	width:200px;
+	padding:10px;
+	border-radius: 5px;
+	outline: 0px;
+}
+#butt
+{
+	
+	width:250px;
+	padding:10px;
+	border-radius: 5px;
+	outline: 0px;
+	background-color:blue;
+	border:2px solid #01010c;
+	color:aliceblue;
+	font-size: 18px;	
+}

@@ -1,0 +1,44 @@
+<?php
+	session_start();
+	$con=mysqli_connect("localhost","root","","highway");
+	if(isset($_REQUEST["submit"]))
+	{
+		$ag_aadhar_id=$_REQUEST['ag_aadhar_id'];
+		$agency_password=$_REQUEST['agency_password'];
+		$sql="select * from agencyreg where ag_aadhar_id='$ag_aadhar_id' && agency_password='$agency_password'";
+		$query=mysqli_query($con,$sql);
+		$rowcount=mysqli_num_rows($query);
+		if($rowcount==true)
+		{
+			$_SESSION["ag_aadhar_id"]=$ag_aadhar_id;
+			header('location:welcome.php');
+		}
+		else
+		{
+			echo "aadharid and password donot match";
+		}
+	}
+		?>
+
+<html>
+<head>
+	<title>AGENCY LOGIN FORM</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<div class="loginbox"> 
+	<img src="avatar.png" class="avatar">
+	<h1>Login Here</h1>
+	<form>
+		<p>User name</p>
+		<input type="text" name="ag_aadhar_id" placeholder="enter username">
+		<p>Password</p>
+		<input type="password" name="agency_password" placeholder="enter the password">
+		<input type="submit" name="" value="Login"> <br>
+		<a href="#" >Lost the password</a><br>
+		<a href="agencyregistration.php">Donot have any account</a>
+</div>
+	</form>
+
+</body>
+</html>
