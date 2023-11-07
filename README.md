@@ -5,6 +5,6 @@ This in turn helps in two ways
 1.Providing the Employment oppurtunities to local.
 2.No need to worry about the workers hiring somewhere and paying them extra.
 
-In this application i hacve integrated with the Google maps where the contractor can search for the employees at that particular location.
+In this application i have integrated with the Google maps where the contractor can search for the employees at that particular location.
 
 
